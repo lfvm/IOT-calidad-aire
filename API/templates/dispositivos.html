@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div">
+
+    <h1>Dispositivos</h1>
+
+    <ul class="list-group table">
+
+        <li class="list-group-item table_item table_header">
+            <p>ID</p>
+            <p>Mac</p>
+            <p>Modelo</p>
+            <p>Marca</p>
+            <p>Ubicacion</p>
+            <p>ID Sensor</p>
+            <p>Eliminar</p>
+        </li>
+
+        {% if dispositivos|length < 1 %} 
+
+            <li class="list-group-item table_item">
+                <p>No hay dispositivos registrados.</p>
+            </li>
+        
+        {% else %}
+
+            {% for dispositivo in dispositivos %}
+            
+                <li class="list-group-item table_item">
+                    <p>{{ dispositivo[0] }}</p>
+                    <p>{{ dispositivo[1] }}</p>
+                    <p>{{ dispositivo[2] }}</p>
+                    <p>{{ dispositivo[3] }}</p>
+                    <p>{{ dispositivo[4] }}</p>
+                    <p>{{ dispositivo[5] }}</p>
+                    <p><a href="/dispositivos/eliminar/{{ dispositivo[0] }}">Eliminar</a> </p>
+                </li>
+            
+            {% endfor %}
+
+        {% endif %}
+
+    </ul>
+
+    <a href="/dispositivos/nuevo">
+        <button class="btn btn-outline-success table_btn">Crear Dispositivo +</button>
+    </a>
+    
+
+</div>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div">
+
+    <h1>Sensores</h1>
+
+    <ul class="list-group table">
+
+        <li class="list-group-item table_item table_header">
+            <p>ID</p>
+            <p>Modelo</p>
+            <p>Marca</p>
+            <p>Precisión</p>
+            <p>Eliminar</p>
+        </li>
+
+        {% if sensores|length < 1 %} 
+
+            <li class="list-group-item table_item">
+                <p>No hay sensores registrados.</p>
+            </li>
+        
+        {% else %}
+    
+            {% for sensor in sensores %}
+            
+                <li class="list-group-item table_item">
+                    <p>{{ sensor[0] }}</p>
+                    <p>{{ sensor[1] }}</p>
+                    <p>{{ sensor[2] }}</p>
+                    <p>{{ sensor[3] }}</p>
+                    <p><a href="/sensores/eliminar/{{ sensor[0] }}">Eliminar</a>
+                    </p>
+                </li>
+            
+            {% endfor %}
+        
+        {% endif %}
+
+    </ul>
+
+    <a href="/sensores/nuevo">
+        <button class="btn btn-outline-success table_btn">Crear Sensor +</button>
+    </a>
+
+    </div>
+{% endblock %}

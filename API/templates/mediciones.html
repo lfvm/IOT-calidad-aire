@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div>
+
+    <h1>Mediciones</h1>
+
+    <ul class="list-group table">
+
+        <li class="list-group-item table_item table_header">
+            <p>ID</p>
+            <p>Valor</p>
+            <p>UTC Timestamp</p>
+            <p>ID Dispositivo</p>
+            <p>Eliminar</p>
+        </li>
+
+        {% if mediciones|length < 1 %}
+
+            <li class="list-group-item table_item">
+                <p>No hay mediciones registradas.</p>
+            </li>
+
+        {% else %}
+
+            {% for medicion in mediciones %}
+
+                <li class="list-group-item table_item">
+                    <p>{{ medicion[0] }}</p>
+                    <p>{{ medicion[1] }}</p>
+                    <p>{{ medicion[2] }}</p>
+                    <p>{{ medicion[3] }}</p>
+                    <p><a href="/mediciones/eliminar/{{ medicion[0] }}">Eliminar</a>
+                </li>
+
+            {% endfor %}
+        
+        {% endif %}
+    </ul>
+
+    </div>
+{% endblock %}

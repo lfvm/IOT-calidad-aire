@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div>
+
+    <h1>Nuevo Sensor</h1>
+
+    <div class="card_container">
+        <div class="card">
+
+            <form action="/sensores/nuevo" method="POST">
+                <input type="text" class="form-control" placeholder="Modelo" id="modeloSensor" name="modeloSensor" required>
+                <input type="text" class="form-control" placeholder="Marca" id="marcaSensor" name="marcaSensor" required>
+                <input type="text" class="form-control" placeholder="Precisión" id="precisionSensor" name="precisionSensor" required>
+                <button class="btn btn-success card_btn">Crear Sensor</button>
+            </form>
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}

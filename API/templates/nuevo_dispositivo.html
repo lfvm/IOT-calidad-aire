@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div>
+
+    <h1>Nuevo Dispositivo</h1>
+
+    <div class="card_container">
+        <div class="card">
+    
+            <form action="/dispositivos/nuevo" method="POST">
+                <input type="text" class="form-control" placeholder="Mac" id="macDispositivo" name="macDispositivo" required>
+                <input type="text" class="form-control" placeholder="Modelo" id="modeloDispositivo" name="modeloDispositivo" required>
+                <input type="text" class="form-control" placeholder="Marca" id="marcaDispositivo" name="marcaDispositivo" required>
+                <input type="text" class="form-control" placeholder="Ubicación" id="ubicacionDispositivo" name="ubicacionDispositivo" required>
+                <input type="text" class="form-control" placeholder="ID Sensor" id="idSensor" name="idSensor" required>
+                <button class="btn btn-success card_btn">Crear Dispositivo</button>
+            </form>
+    
+        </div>
+    </div>
+
+</div>
+{% endblock %}

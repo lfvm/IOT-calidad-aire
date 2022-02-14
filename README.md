@@ -1,4 +1,4 @@
-# sistema_iot
+# Sistema para medicion de calidad del aire.
 ## Colaboradores: Marco Torres, Andrea Ochoa, Miguel Bustamante, Valeria Parraga, Fernando Valdeon
 
 En este repositorio se encuentra un sistema que utiliza el internet de las cosas para llevar un registro de la calidad del aire de una habitacion.

@@ -7,3 +7,4 @@ Para ello se utilizo un arduino uno con un modulo wifi, el cual cuenta con un se
 Posteriormente se conecta a una API que guarda los datos del sensor en una DB de MySQLl.
 Por ultimo el usuario podra consultar los datos en la interfaz de la API
 
+<img width="1294" alt="Captura de Pantalla 2022-02-14 a la(s) 14 10 19" src="https://user-images.githubusercontent.com/57450093/153938801-5ca44adf-470c-4f74-99d4-c8a44b4f3184.png">

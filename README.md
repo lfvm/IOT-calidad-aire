@@ -3,7 +3,7 @@
 System that monitors the air quality based on the ammount of Co2 present in a closed room.
 
 For this, an Arduino Uno with a Wi-Fi module was used, which uses a sensor that measures the amount of Co2 found in the environment.
-After a measurment is done, the device connects to the API that saves the sensor data in a MySQLl database.
+After a measurment is done, the device connects to the API that saves the sensor data in a MySQL database.
 Finally, the user will be able to consult the data in the API interface.
 
 ## Screenshots: 
